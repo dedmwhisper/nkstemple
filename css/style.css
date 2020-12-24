@@ -192,6 +192,9 @@ filter: brightness(1);
   padding: 0;
   margin: 0;
 } 
+.section1 {
+  position: relative;
+}
 section > .container-fluid{
   padding: 0;
   margin: 0;
