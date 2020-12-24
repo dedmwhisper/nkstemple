@@ -8,91 +8,115 @@ body.modal-open {
 *{
   transition: 0.25s;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 /* .section2{
   display: none;
 } */
 /* 主選單 */
 /* sidemenu */
+/* 主選單 */
+/* sidemenu */
+.home{
+  z-index: 2;
+  position: fixed;
+  cursor: pointer;
+  top: 15px;
+  left: 25px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 50%;
+}
+.home:hover{
+  transform: scale(1.1);
+  filter: drop-shadow(0px 0px 10px rgb(255,255,255));
+  
+}
 .menu{
-    z-index: 2;
-    position: fixed;
-    cursor: pointer;
-    top: 15px;
-    left: 25px;
-  }
+  z-index: 2;
+  position: fixed;
+  cursor: pointer;
+  top: 15px;
+  right: 25px;
+  background-color: #999999;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+.menu:hover{
+  background-color: rgb(68, 68, 68);
+}
 .navecontent{
-  visibility: hidden;
-  transition: 0.5s;
+visibility: hidden;
+transition: 0.5s;
+display: none;
+}
+.sidenav {
+  height: 100%;
+  width: 0; 
+  position: fixed; 
+  z-index: 3; 
+  top: 0;
+  left: 0;
+  background-color: #111111; 
+  overflow: hidden; 
+  padding-top: 5px; 
+  transition: 0.5s; 
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.sidenav .closebtn {
+z-index: 999;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+a.profile{
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 1%;
+  transition: 0.3s ease-in-out;
+  color: #fff;
+}
+.profilepic{
+  cursor: pointer;
+  filter:brightness(.5);
+}
+.profilepic:hover ~ span.protext{
+  margin-top: 180px;
+}
+.profilepic:hover{
+  filter:brightness(1);
+  transform: rotate(-15deg);
+}
+.protext{
+  cursor: pointer;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  font-size: 3vmax;
+  font-weight: 900;
+  color: #fff;
+}
+.protext:hover{
   display: none;
 }
-  .sidenav {
-    height: 100%;
-    width: 0; 
-    position: fixed; 
-    z-index: 3; 
-    top: 0;
-    left: 0;
-    background-color: #111; 
-    overflow: hidden; 
-    padding-top: 5px; 
-    transition: 0.5s; 
-  }
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  .sidenav .closebtn {
-  z-index: 999;
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  .profile{
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding: 1%;
-    transition: 0.3s ease-in-out;
-    color: #fff;
-  }
-  .profilepic{
-    cursor: pointer;
-    filter:brightness(.5);
-  }
-  .profilepic:hover ~ span.protext{
-    margin-top: 180px;
-  }
-  .profilepic:hover{
-    filter:brightness(1);
-    transform: rotate(-15deg);
-  }
-  .protext{
-    cursor: pointer;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    font-size: 3vmax;
-    font-weight: 900;
-    /* color: #fff; */
-  }
-  .protext:hover{
-    display: none;
-  }
 span.protext:hover ~ img.profilepic{
-  filter: brightness(1);
+filter: brightness(1);
+
 }
   
   @media screen and (max-height: 450px) {
@@ -229,18 +253,17 @@ p.bubble {
           transform-origin: left bottom;
 }
 p.b1{
-  left: 3%;
-  top: 65%;
+  left: 0%;
+  top: 45%;
 }
 p.b2{
-  left: 56%;
-  top: 50%;
+  left: 70%;
+  top: 40%;
   border-radius: 0px 1vmax 5px 1vmax;
 }
 p.b3{
-  left: 52%;
-  top: 30%;
-  border-radius: 0px 1vmax 5px 1vmax;
+  left: 10%;
+  top: 20%;
 }
 @keyframes bounce-in {
   from, 20%, 40%, 60%, 80%, to {
@@ -381,6 +404,50 @@ img.gamestartbg{
   left: 25%;
   top: 46%;
 }
+/* gameans */
+.gameansbg{
+  position: relative;
+  text-align: center;
+}
+.gameans{
+  margin-top: 3%;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  width: 70%;
+  height: 17vh;
+}
+.ans{
+  position: absolute;
+  transition: 0.25s;
+  transform: scale(0.6);
+  left: 0;
+  top: 0px;
+  filter: brightness(0);
+}
+.ans1{
+  left: 5%;
+  top: 20%;
+}
+.ans2{
+  left: 25%;
+  top: 20%;
+}
+.ans3{
+  left: 45%;
+  top: 20%;
+}
+.ans4{
+  left: 60%;
+  top: 5%;
+}
+.ans5{
+  left: 80%;
+  top: -5%;
+}
+/* section4 */
 /* section4 */
 .section4{
   background:url(../images/section4_bg.png) center center no-repeat;
@@ -390,17 +457,48 @@ img.gamestartbg{
   padding-top: 5%;
   padding-bottom: 5%;
 }
+.title{
+  position: relative;
+}
+.titlebg{
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  left: 0;
+  /* margin-top: -10%; */
+}
+.titletext{
+  position: relative;
+  font-weight: 900;
+  font-size: 3.5vmax;
+  margin-top: 5%;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* background-image: url(../images/title_bg.png);
+  background-size: cover;
+  background-position: 50%; */
+  width: 100%;
+  height: 100%;
+}
+.introsection{
+  margin-top: 10%;
+}
 .introcontent{
+  position: relative;
+  height: 350px;
+  width: 350px;
   padding: 10%;
   padding-top: 5%;
-  margin: 10%;
+  margin-left: auto;
+  margin-right: auto;
   color: #f1f1f1;
-  background: rgba( 255, 255, 255, 0.3 );
+  background: rgba( 255, 239, 201, 0.60 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 4px );
-  -webkit-backdrop-filter: blur( 4px );
-  border-radius: 20px;
-  border: 1px solid #fff;
+  backdrop-filter: blur( 4.0px );
+  -webkit-backdrop-filter: blur( 4.0px );
+  border-radius: 50%;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 img.intro{
   filter: drop-shadow(3px 3px 10px rgb(0, 0, 0));
@@ -414,6 +512,27 @@ img.intro{
   background-color: #fff;
 }
 .introcontent > p{
-  text-align-last: left;
-  font-size: 18px;
+  width: 80%;
+  position: absolute;
+  text-align: center;
+  font-size: 26px;  /* ★ */
+  top: 50%; 
+  left: 50%;            /* ★ */
+  transform: translate(-50%,-50%); 
+  font-weight: 600;
+  line-height: 1.5;
+
+}
+
+.section5{
+  padding-top: 4%;
+  padding-bottom: 7%;
+  background-color:rgba(190,132,89, 0.8);
+}
+.calltoaction > .row{
+  text-align: center;
+}
+.cta{
+  text-align: center;
+  padding-top: 10px;
 }
