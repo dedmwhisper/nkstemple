@@ -191,6 +191,7 @@ filter: brightness(1);
   /* position: relative; */
   padding: 0;
   margin: 0;
+  overflow: hidden;
 } 
 .section1 {
   position: relative;
