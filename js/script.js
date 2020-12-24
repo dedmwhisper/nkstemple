@@ -6,26 +6,21 @@ window.addEventListener('load', () =>{
   });
   
   
-/* Open the sidenav */
-function openNav() {
-  document.getElementById("mysidenav").style.width = "100%";
-  document.getElementsByClassName("navcontent")[0].style.display = "block";
-  document.getElementsByClassName("navcontent")[0].style.visibility = "visible";
-  document.html.style.overflow = 'hidden';
-}
-
-/* Close/hide the sidenav */
-function closeNav() {
-  document.getElementById("mysidenav").style.width = "0";
-  document.getElementsByClassName("navcontent")[0].style.display = "none";
-  document.html.style.overflow = 'auto';
-}
-// $("#mysidenav").on("show", function () {
-//   $("body").addClass("modal-open");
-// }).on("hidden", function () {
-//   $("body").removeClass("modal-open")
-// });
+  var body = document.getElementsByTagName("body")[0]; 
+  /* Open the sidenav */
+  function openNav() {
+    document.getElementById("mysidenav").style.width = "100%";
+    document.getElementsByClassName("navcontent")[0].style.display = "block";
+    document.getElementsByClassName("navcontent")[0].style.visibility = "visible";
+    body.style.overflow = "hidden";
+  }
   
+  /* Close/hide the sidenav */
+  function closeNav() {
+    document.getElementById("mysidenav").style.width = "0";
+    document.getElementsByClassName("navcontent")[0].style.display = "none";
+    body.style.overflow = "auto";
+  }
   
   //Get the button:
   gtp = document.getElementById("gtp");
@@ -93,3 +88,13 @@ $(function(){
      easing: 'ease-in-sine'
  });
 })
+
+var change = document.getElementById("change");
+
+change.onmouseover = function(e) {
+  change.innerHTML = "南鯤鯓代天府";
+}
+
+change.onmouseout = function(e) {
+  change.innerHTML = "華麗轉身後的";
+}
