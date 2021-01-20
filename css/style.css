@@ -155,28 +155,33 @@ filter: brightness(1);
   }
 }
   
-  /* loading */
-  .loading {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 1s ease;
-    z-index: 200 !important;
-  }
-  .loading-finish {
-    opacity: 0;
-    pointer-events: none;
-  }
-  .temple1 {
-    width: 200px;
-  /*  height: 100px;*/
-    animation: loading 1s ease infinite alternate;
-  }
+ /* loading */
+ .loading {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease;
+  z-index: 200 !important;
+}
+.loading-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+.temple1 {
+  width: 200px;
+/*  height: 100px;*/
+  animation: loading 1s ease infinite alternate;
+}
+.loading >p{
+  padding: 30px;
+  color:#fff;
+  font-size: 20px;
+}
   
   @keyframes loading {
     from {
